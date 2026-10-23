@@ -2,8 +2,12 @@
 #^------------------------------
 #^html trim=ends
 <!DOCTYPE html>
-<html>
-<head>{head}</head>
+<html lang="en">
+<head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="shi was one of ten artists commissioned by Bradford Culture Company to explore specific sites on the Bradford Pennine Gateway National Nature Reserve.">
+    {head}
+</head>
 <body>{body}</body>
 </html>
 
@@ -19,9 +23,96 @@
 #^------------------------------
 #^title trim=ends
 
-Title is missing.
+B O G S   O F   B R A T F U D
 
 #^------------------------------
 #^body trim=ends
 
-Body is missing.
+<div class="home">You might want to go <a href="{_root}index.html">home</a>.</div>
+
+#^header trim=ends
+<header role="menubar" aria-label="Head" class="head_content">
+	<a class="skip-link" href='#main'>Skip to content</a>
+    <div class="row">
+        <div class="nav_wrap">
+            <div class="logo">
+				<a href="{_root}index.html">
+					<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="{_root}data/web_logo.svg"></span>
+				</a>
+			</div>
+            <nav aria-label="Main" class="nav_content">
+				<div class="performances"><a href="#downloads">Downloads</a></div>
+				<div class="news"><a href="#news">Residency</a></div>
+                <div class="releases"><a href="#releases">Recordings</a></div>
+                <div class="about"><a href="#about">About</a></div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+#^mob_header trim=ends
+<header class="mob_content">
+<div id="mob_nav">
+    <div class="logo mob_logo">
+		<a href="{_root}index.html">
+			<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="{_root}data/web_logo.svg" width="38" height="38"></span>
+		</a>
+	</div>
+    <input id="mob_toggle" type="checkbox" />
+    <label for="mob_toggle">
+        <span></span>
+        <span></span>
+        <span class="aria-invisible">Menu navigation</span>
+        <span></span>
+    </label>
+    <nav aria-label="Mobile Main">
+        <ul class="mob_nav_content">
+        <li><div class="mob_link"><a href="{_root}index.html">Home</a></div></li>
+        <li><div class="mob_link"><a href="{_root}index.html#news">Residency</a></div></li>
+        <li><div class="mob_link"><a href="{_root}index.html#releases">Recordings</a></div></li>
+        <li>
+			<div class="mob_cc_wrap">
+				<div class="mob_about">{about_text}</div>
+				<div class="mob_cc">{email} | {bandcamp} | {instagram}</div>
+			</div>
+        </li>
+        </ul>
+    </nav>
+</div>
+</header>
+
+#^email trim=ends
+<a href="mailto:notshi@gmail.com">Email</a>
+
+#^bandcamp trim=ends
+<a href="https://shiblank.bandcamp.com/">Bandcamp</a>
+
+#^instagram trim=ends
+<a href="https://instagram.com/shi.blank/">Instagram</a>
+
+#^about_text trim=ends form=markdown
+<b>shi Blank</b> was one of ten artists commissioned by Bradford Culture Company to explore specific sites on the Bradford Pennine Gateway National Nature Reserve.
+
+
+They have been exploring Bingley North Bog and its wildlife over the past three months. As part of their residency, shi will come together with their avantgarde ambient duo, <b>Gilank</b> for an improvised performance at dusk using field recordings at the bog. A Duet with Bingley Bog seeks to question the impact of human activities on our nature reserves and what this relationship could be if we stop polluting our environment.
+
+
+This Bog is 10,000 years old and plays a huge role in our existence on the planet. It is right next to the A650 motorway and has only been granted official National Nature Reserve status very recently.
+
+#^footer trim=ends
+<footer class="foot_content" id="about">
+    <div class="row">
+        <div class="about_wrap">
+            <div class="about"><h3>About</h3></div>
+            <div class="about_text">
+                {about_text}
+            </div>
+        </div>
+        <div class="cc_wrap">
+            <div class="cc_text">
+                {email} | {bandcamp} | {instagram}
+            </div>
+            <div class="top"><a href="#">Back up</a></div>
+        </div>
+    </div>
+</footer>

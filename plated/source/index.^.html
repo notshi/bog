@@ -2,13 +2,121 @@
 #^------------------------------
 #^title trim=ends
 
-This is the title
+B O G S   O F   B R A T F U D
 
 #^------------------------------
-#^body trim=ends form=markdown
+#^body trim=ends
 
-Welcome
--------
+<div class="main_wrap">
+	{mob_header}{header}
+	<main id="main" class="main_content row">
+		<div class="link_wrap" id="video">{vid}</div>
+		<div class="link_wrap" id="downloads">{downloads}</div>
+		<div class="link_wrap" id="news">{news}</div>
+		<div class="link_wrap" id="releases">{releases}</div>
+	</main>
+	{footer}
+</div>
 
-Here is a web page rendered from markdown.
+#^vid trim=ends
+<div class="blog_data">
+	<img src="{_root}data/A_Duet_with_Bingley_Bog_score_by_Gilank.png"/>
+</div>
 
+#^news trim=ends
+<div class="cont_wrap">
+	<div class="title"><h3>residency</h3></div>
+	{news_text}
+</div>
+
+#^news_text
+<div class="blog_wrap">
+	<div class="blog_date">24.10.2026</div>
+	I feel really fortunate to have been selected for this residency. 3 months really flew by and my improvised performance will happen this Sunday, rain or storm.
+	
+	Sometimes you can get bogged (lol) down with the details of the work but I promised a friend that I would slow down and appreciate the experience in its entirety ~ whenever I can. Hopefully, this deliberate contemplation of my relationship with mother nature has translated across to you through this sharing, be it the field recordings, the zine, the score or the performance.
+	
+	<br/><br/>I'm really looking forward to the improvised performance with Alice and I hope you'll join us for an hour of ambient, strange and hopefully, calming soundscape that is entirely inspired by my visits to the bog.
+	<div class="blog_data">
+		<img src="{_root}data/bog1.jpg"/>
+	</div>
+</div>
+
+#^releases trim=ends
+<div class="cont_wrap">
+	<div class="title"><h3>field recordings</h3></div>
+	{releases_text}
+</div>
+
+#^downloads trim=ends
+<div class="cont_wrap">
+	<div class="title"><h3>downloads</h3></div>
+	{downloads_text}
+</div>
+
+#^downloads_text trim=ends form=markdown
+
+<table class="tunes current old">
+	<tr>
+		<th class="date">WOT<div></div></th>
+		<th class="track">DOWNLOAD LINKS<div></div></th>
+	</tr>
+	<tr></tr>
+	<tr>
+		<td>DOWNLOAD ZINE</td>
+		<td><a href="{_root}data/Bogs_of_Bratfud_shi_Blank.pdf">Bogs_of_Bratfud_shi_Blank.pdf</a></td>
+	</tr>
+	<tr>
+		<td>DOWNLOAD GRAPHIC SCORE</td>
+		<td><a href="{_root}data/A_Duet_with_Bingley_Bog_Graphic_Score_by_Gilank.pdf">A_Duet_with_Bingley_Bog_Graphic_Score_by_Gilank.pdf</a></td>
+	</tr>
+</table>
+
+#^releases_text trim=ends form=markdown
+
+<table class="tunes previous old">
+	<tr>
+		<th class="date">TITLE<div></div></th>
+		<th class="track">LISTEN<div></div></th>
+	</tr>
+	<tr></tr>
+	<tr>
+		<td>Sunrise with Earsight V2 (extended)</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=1492130329/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+	<tr>
+		<td>Sunrise with JrF C-Series Contact</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=2002639807/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+	<tr>
+		<td>Sunrise with Earsight V2</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=2689930447/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+	<tr>
+		<td>Sunrise (High Pass) with Earsight V2</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=3376499835/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+	<tr>
+		<td>Sunset with Earsight V2</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=2027909440/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+	<tr>
+		<td>Sunset (High Pass) with Earsight V2</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=3855205591/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+	<tr>
+		<td>Sunset with JrF C-Series Ecoutic</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=1183734728/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+	<tr>
+		<td>Sunset train with Earsight V2</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=1475845929/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+	<tr>
+		<td>Sunset with JrF D-Series+ Hydrophones</td>
+		<td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=2199428392/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+	</tr>
+</table>
+  
+ 
+ 
