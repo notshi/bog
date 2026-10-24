@@ -53,6 +53,7 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 .blog_date		{margin-bottom:0.6em; font-size:14px;}
 .blog_data		{display:flex; margin-top:1em; flex-wrap:wrap; gap:10px;}
 .blog_data a:hover	{background-color:transparent;}
+.blog_data.fund	{text-align:center;}
 
 .about_wrap     {margin-top:1.5em; margin-bottom:1.5em; width:100%; background:#ececec; padding:1.5em;}
 .about_text     {font-size:18px; padding-top:20px; line-height:22px;}
