@@ -98,10 +98,12 @@ table.tunes.current td a{background-color:#fff;}
 
 @media (min-width: 360px) and (max-width: 767.98px) {
 html            {font-size:18px;}
-body            {padding:0.5em 1.5em; font-size:1.0rem;}
+body            {background-image:url("{_root}/data/bog_back.png"), url("{_root}/data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:top, bottom; font-size:1.0rem;}
+.main_wrap		{background:transparent; padding:0.5em 1.5em;}
 .head_content   {display:none;}
 .mob_content    {display:block;}
 .main_content   {padding-top:3em;}
+.foot_content	{border-top:1px solid #ccc;}
 h2              {font-size:1.2rem; line-height:inherit;}
 .about_text     {font-size:1.0rem; line-height:inherit;}
 h1				{font-size:1.5rem; line-height:inherit;}
@@ -113,16 +115,18 @@ h1				{font-size:1.5rem; line-height:inherit;}
 .funder_img     {width:initial;}
 .funder_text    {padding:20px 0 0 0;}
 .cont_wrap p	{font-size:0.85rem;}
-table.tunes th.date 		{width:5em; padding-left:0;}
-table.tunes th.track 		{display:none;}
+table.tunes th.date 		{padding-left:0; width:1em;}
+table.tunes th.track 		{}
 table.tunes th.date div 	{left:0;}
 table.tunes td:first-of-type{padding-left:0;}
 table.tunes.current td		{vertical-align:top;}
-table.tunes.current td:last-of-type {display:none;}
+table.tunes.current td a	{word-wrap:anywhere;}
+table.tunes.current td:last-of-type {}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-body            {padding:0.5em 1.5em; font-size:1.0rem;}
+body            {background-image:url("{_root}/data/bog_back.png"), url("{_root}/data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:top, bottom; font-size:1.0rem;}
+.main_wrap		{background:transparent; padding:0.5em 1.5em;}
 .nav_content    {padding:0;}
 h1, h2			{font-size:1.5rem; line-height:inherit;}
 .cc_wrap > div  {font-size:0.8em;}
@@ -132,10 +136,11 @@ h1, h2			{font-size:1.5rem; line-height:inherit;}
 .funder_wrap    {flex-flow:wrap; justify-content:left;}
 .funder_text    {padding:20px 0 0 0;}
 .cont_wrap p	{font-size:0.85rem;}
-table.tunes th.date 		{width:5em; padding-left:0;}
-table.tunes th.track 		{display:none;}
+table.tunes th.date 		{width:2em; padding-left:0;}
+table.tunes th.track 		{}
 table.tunes th.date div 	{left:0;}
 table.tunes td:first-of-type{padding-left:0;}
 table.tunes.current td		{vertical-align:top;}
-table.tunes.current td:last-of-type {display:none;}
+table.tunes.current td a	{word-wrap:anywhere;}
+table.tunes.current td:last-of-type {}
 }

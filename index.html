@@ -71,7 +71,7 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 .mob_logo       {position:fixed; top:0; left:1.5rem; z-index:6; height:80px;}
 .mob_logo a img {height:30px;}
 .mob_link       {font-size:1.5rem; margin-bottom:1.5rem;}
-.mob_about      {font-size:1.0rem; margin-bottom:1.0rem; border-top:1px solid #666ed3; border-bottom:1px solid #666ed3; padding:1.0rem 0;}
+.mob_about      {font-size:1.0rem; margin-bottom:1.0rem; border-top:1px solid transparent; border-bottom:1px solid transparent; padding:1.0rem 0;}
 .mob_cc_wrap    {margin-top:2.5rem;}
 .mob_cc         {font-size:0.8rem; line-height:initial; margin-top:0.3rem;}
 
@@ -83,7 +83,7 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 #mob_nav input:checked + label span {opacity:0; top:25%;}
 #mob_nav input:checked + label span:first-child {opacity:1; transform:rotate(405deg);}
 #mob_nav input:checked + label span:last-child {opacity:1; transform:rotate(-405deg);}
-#mob_nav input ~ nav {background:#1C1E26; position:fixed; top:0; left:0; width:100%; height:80px; z-index:3; transition:0s; transition-delay:0s; overflow:hidden;}
+#mob_nav input ~ nav {background:#ECECEC; position:fixed; top:0; left:0; width:100%; height:80px; z-index:3; transition:0s; transition-delay:0s; overflow:hidden;}
 #mob_nav input ~ nav > ul {position:absolute; top:100px; left:1.5rem; right:1.5rem;}
 #mob_nav input ~ nav > ul > li {opacity:0; transition:0s; transition-delay:0s;}
 #mob_nav input ~ nav > ul > li > div > a {display:block;}
@@ -104,10 +104,12 @@ table.tunes.current td a{background-color:#fff;}
 
 @media (min-width: 360px) and (max-width: 767.98px) {
 html            {font-size:18px;}
-body            {padding:0.5em 1.5em; font-size:1.0rem;}
+body            {background-image:url(".//data/bog_back.png"), url(".//data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:top, bottom; font-size:1.0rem;}
+.main_wrap		{background:transparent; padding:0.5em 1.5em;}
 .head_content   {display:none;}
 .mob_content    {display:block;}
 .main_content   {padding-top:3em;}
+.foot_content	{border-top:1px solid #ccc;}
 h2              {font-size:1.2rem; line-height:inherit;}
 .about_text     {font-size:1.0rem; line-height:inherit;}
 h1				{font-size:1.5rem; line-height:inherit;}
@@ -119,16 +121,18 @@ h1				{font-size:1.5rem; line-height:inherit;}
 .funder_img     {width:initial;}
 .funder_text    {padding:20px 0 0 0;}
 .cont_wrap p	{font-size:0.85rem;}
-table.tunes th.date 		{width:5em; padding-left:0;}
-table.tunes th.track 		{display:none;}
+table.tunes th.date 		{padding-left:0; width:1em;}
+table.tunes th.track 		{}
 table.tunes th.date div 	{left:0;}
 table.tunes td:first-of-type{padding-left:0;}
 table.tunes.current td		{vertical-align:top;}
-table.tunes.current td:last-of-type {display:none;}
+table.tunes.current td a	{word-wrap:anywhere;}
+table.tunes.current td:last-of-type {}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-body            {padding:0.5em 1.5em; font-size:1.0rem;}
+body            {background-image:url(".//data/bog_back.png"), url(".//data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:top, bottom; font-size:1.0rem;}
+.main_wrap		{background:transparent; padding:0.5em 1.5em;}
 .nav_content    {padding:0;}
 h1, h2			{font-size:1.5rem; line-height:inherit;}
 .cc_wrap > div  {font-size:0.8em;}
@@ -138,58 +142,25 @@ h1, h2			{font-size:1.5rem; line-height:inherit;}
 .funder_wrap    {flex-flow:wrap; justify-content:left;}
 .funder_text    {padding:20px 0 0 0;}
 .cont_wrap p	{font-size:0.85rem;}
-table.tunes th.date 		{width:5em; padding-left:0;}
-table.tunes th.track 		{display:none;}
+table.tunes th.date 		{width:2em; padding-left:0;}
+table.tunes th.track 		{}
 table.tunes th.date div 	{left:0;}
 table.tunes td:first-of-type{padding-left:0;}
 table.tunes.current td		{vertical-align:top;}
-table.tunes.current td:last-of-type {display:none;}
+table.tunes.current td a	{word-wrap:anywhere;}
+table.tunes.current td:last-of-type {}
 }
 
 </style>
 </head>
 <body><div class="main_wrap">
-	<header class="mob_content">
-<div id="mob_nav">
-    <div class="logo mob_logo">
-		<a href="./index.html">
-			<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="./data/web_logo.svg" width="38" height="38"></span>
-		</a>
-	</div>
-    <input id="mob_toggle" type="checkbox" />
-    <label for="mob_toggle">
-        <span></span>
-        <span></span>
-        <span class="aria-invisible">Menu navigation</span>
-        <span></span>
-    </label>
-    <nav aria-label="Mobile Main">
-        <ul class="mob_nav_content">
-        <li><div class="mob_link"><a href="./index.html">Home</a></div></li>
-        <li><div class="mob_link"><a href="./index.html#news">Residency</a></div></li>
-        <li><div class="mob_link"><a href="./index.html#releases">Recordings</a></div></li>
-        <li>
-			<div class="mob_cc_wrap">
-				<div class="mob_about"><p><b>shi Blank</b> was one of ten artists commissioned by Bradford Culture Company to explore specific sites on the Bradford Pennine Gateway National Nature Reserve.
-<br/>
-<br/></p>
-<p>They have been exploring Bingley North Bog and its wildlife over the past three months. As part of their residency, shi will come together with their avantgarde ambient duo, <b>Gilank</b> for an improvised performance at dusk using field recordings at the bog. A Duet with Bingley Bog seeks to question the impact of human activities on our nature reserves and what this relationship could be if we stop polluting our environment.
-<br/>
-<br/></p>
-<p>This Bog is 10,000 years old and plays a huge role in our existence on the planet. It is right next to the A650 motorway and has only been granted official National Nature Reserve status very recently.</p>
-</div>
-				<div class="mob_cc"><a href="mailto:notshi@gmail.com">Email</a> | <a href="https://shiblank.bandcamp.com/">Bandcamp</a> | <a href="https://instagram.com/shi.blank/">Instagram</a></div>
-			</div>
-        </li>
-        </ul>
-    </nav>
-</div>
-</header><header role="menubar" aria-label="Head" class="head_content">
-	<a class="skip-link" href='#main'>Skip to content</a>
+	<div class="logo">
+	<img src="./data/bob.svg"/>
+</div><header role="menubar" aria-label="Head" class="head_content">
     <div class="row">
         <div class="nav_wrap">
             <div class="logo">
-				<span>Bogs of Bratfud</span>
+				<img src="./data/bob.svg"/>
 			</div>
             <nav aria-label="Main" class="nav_content">
 				<div class="performances"><a href="#downloads">Downloads</a></div>
@@ -226,6 +197,10 @@ table.tunes.current td:last-of-type {display:none;}
 	<div class="title"><h3>residency</h3></div>
 	<div class="blog_wrap">
 	<div class="blog_date">24.10.2026</div>
+	<div class="blog_data">
+		<img src="./data/bob.svg"/>
+	</div>
+	<br/>
 	I feel really fortunate to have been selected for this residency. 3 months really flew by and my improvised performance will happen this Sunday, rain or storm.
 	
 	Sometimes you can get bogged (lol) down with the details of the work but I promised a friend that I would slow down and appreciate the experience in its entirety ~ whenever I can. Hopefully, this deliberate contemplation of my relationship with mother nature has translated across to you through this sharing, be it the field recordings, the zine, the score or the performance.
