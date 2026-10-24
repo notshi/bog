@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="shi was one of ten artists commissioned by Bradford Culture Company to explore specific sites on the Bradford Pennine Gateway National Nature Reserve.">
+    <title>B O G S   O F   B R A T F U D</title>
+<style>
+
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}article,footer,header,main,menu,nav,section,summary{display:block;}
+
+html    {font-size:18px; scroll-behavior:smooth; scroll-padding-top:100px;}
+body	{background:#ECECEC; font-family:sans-serif; font-size:18px; font-weight:400; line-height:1.5em; color:#111; max-width:100%; overflow-x:hidden; padding:0; margin:0;}
+h1		{font-size:1.5em; font-weight:normal;}
+h2		{font-size:1.5em; font-weight:normal;}
+h3      {font-size:1.0em; font-weight:500; color:#111; letter-spacing:15px; text-transform:uppercase;}
+h4      {font-size:0.8em; font-style:italic; color:#111; letter-spacing:15px; text-transform:uppercase; margin-top:3em; margin-bottom:2em;}
+b		{font-weight:bold; font-weight:700;}
+i		{font-style:italic;}
+a		{color:#111; text-decoration:none; transition:all 0.5s ease-out; background-color:#ececec; padding:5px 10px; border-radius:5px;}
+a:hover	{text-decoration:#111 wavy underline; text-underline-offset:5px;}
+
+iframe	{height:640px;}
+
+*:focus {outline:2px solid transparent;}
+*:focus:not(:focus-visible) {outline:2px solid transparent; box-shadow:none;}
+*:focus-visible		{outline: 3px solid #918170;}	/* for overriding FF's dotted outline*/
+input:focus			{outline:2px solid transparent; box-shadow: 0 0 0 2px #918170;}
+input:focus-visible {outline:2px solid #918170; background-color:#fff; border-color:#918170;}
+
+.aria-invisible {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}
+
+.skip-link		{background:#665645; border-radius:0 0 6px 6px; color:#fff; height:30px; left:50%; padding:6px; position:absolute; transform:translateY(-100%); transition:transform 0.3s;}
+.skip-link:focus{transform:translateY(0%);}
+
+.main_wrap		{background-image:url(".//data/bog_back.png"), url(".//data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:top, bottom;}
+.row            {max-width:1170px; margin-right:auto; margin-left:auto; display:flex; flex-flow:row wrap;}
+.head_content   {top:0; background-color:transparent; z-index:3;}
+.main_content   {min-height:400px; padding-top:20px; padding-bottom:20px;}
+.foot_content   {border-top:1px solid transparent;}
+.link_wrap		{padding-top:2em; width:100%;}
+.cont_wrap		{margin-bottom:2em;}
+.nav_wrap,
+.cc_wrap,
+.funder_wrap    {display:flex; align-items:center; justify-content:space-between; width:100%;}
+.cc_wrap        {align-items:baseline; border-top:1px solid #776ebf; padding:20px 0 40px 0;}
+.cc_text		{color:#bbb;}
+.funder_wrap    {align-items:center; padding:20px 0;}
+.nav_content    {display:flex; padding-left:30px; align-items: baseline; justify-content:space-between; width:40%;}
+.logo           {height:100px; align-items:center; justify-content:center; display:flex;}
+.more           {text-align:center; width:100%; padding:30px 0; font-size:26px;}
+
+.logo span		{color:#ececec;}
+.logo a         {display:flex; align-items:center;}
+.logo a img     {width:50px; height:50px; padding-right:10px; filter:invert(1);}
+
+.title			{margin:1em 0; border-bottom:1px solid transparent; padding-bottom:1em;}
+.blog_wrap		{margin:1.5em 0;}
+.blog_wrap a	{color:#699cfb;}
+.blog_date		{margin-bottom:0.6em; font-size:14px;}
+.blog_data		{display:flex; margin-top:1em; flex-wrap:wrap; gap:10px;}
+.blog_data a:hover	{background-color:transparent;}
+
+.about_wrap     {margin-top:1.5em; margin-bottom:1.5em; width:100%; background:#ececec; padding:1.5em;}
+.about_text     {font-size:18px; padding-top:20px; line-height:22px;}
+.about_text b   {font-weight:700;}
+.about_text_title   {font-weight:300; margin-bottom:20px; font-style:italic;}
+.about_text_zine    {font-size:18px; text-align:right;}
+
+/*	Mobile Navigation adapted from Copyright (c) 2022 by Julien Lejeune (https://codepen.io/jlnljn/pen/LZXoBb)*/
+.mob_content    {display:none;}
+.mob_logo       {position:fixed; top:0; left:1.5rem; z-index:6; height:80px;}
+.mob_logo a img {height:30px;}
+.mob_link       {font-size:1.5rem; margin-bottom:1.5rem;}
+.mob_about      {font-size:1.0rem; margin-bottom:1.0rem; border-top:1px solid #666ed3; border-bottom:1px solid #666ed3; padding:1.0rem 0;}
+.mob_cc_wrap    {margin-top:2.5rem;}
+.mob_cc         {font-size:0.8rem; line-height:initial; margin-top:0.3rem;}
+
+#mob_nav input + label {position:fixed; top:1.5rem; right:20px; height:40px; width:40px; z-index:5;}
+#mob_nav input + label span {position:absolute; width:18px; height:2px; top:25%; margin-top:-1px; left:0; display:block; background:#aaa; transition:0s;}
+#mob_nav input + label span:first-child {top:4px;}
+#mob_nav input + label span:last-child {top:16px;}
+#mob_nav label:hover {cursor:pointer;}
+#mob_nav input:checked + label span {opacity:0; top:25%;}
+#mob_nav input:checked + label span:first-child {opacity:1; transform:rotate(405deg);}
+#mob_nav input:checked + label span:last-child {opacity:1; transform:rotate(-405deg);}
+#mob_nav input ~ nav {background:#1C1E26; position:fixed; top:0; left:0; width:100%; height:80px; z-index:3; transition:0s; transition-delay:0s; overflow:hidden;}
+#mob_nav input ~ nav > ul {position:absolute; top:100px; left:1.5rem; right:1.5rem;}
+#mob_nav input ~ nav > ul > li {opacity:0; transition:0s; transition-delay:0s;}
+#mob_nav input ~ nav > ul > li > div > a {display:block;}
+#mob_nav input:checked ~ nav {height:100%; transition-delay:0s;}
+#mob_nav input:checked ~ nav > ul > li {opacity:1; transition-delay:0s;}
+
+table.tunes		{width:100%;}
+table.tunes	tr	{height:1em;}
+table.tunes	tr:hover td		{background-color:#151621;}
+table.tunes.old	tr:hover td	{background-color:transparent;}
+table.tunes th		{color:#aaa; font-size:14px; padding:0.5em 0 0.5em 0.5em; position:relative;}
+table.tunes th.date	{}
+table.tunes th div	{position:absolute; pointer-events:none; border-bottom:1px solid #aaa; width:calc(100% - 1.5625em); bottom:0; left:0.5em;}
+table.tunes td		{vertical-align:top; padding:0.5em 0 0.5em 0.5em;}
+table.tunes.current td	{vertical-align:middle;}
+table.tunes.current td a{background-color:#fff;}
+
+
+@media (min-width: 360px) and (max-width: 767.98px) {
+html            {font-size:18px;}
+body            {padding:0.5em 1.5em; font-size:1.0rem;}
+.head_content   {display:none;}
+.mob_content    {display:block;}
+.main_content   {padding-top:3em;}
+h2              {font-size:1.2rem; line-height:inherit;}
+.about_text     {font-size:1.0rem; line-height:inherit;}
+h1				{font-size:1.5rem; line-height:inherit;}
+.cc_wrap        {display:block;}
+.cc_text		{margin-bottom:20px;}
+.mob_cc			{font-size:1.0rem;}
+.link_wrap		{padding-top:0.5em;}
+.funder_wrap    {flex-flow:column;}
+.funder_img     {width:initial;}
+.funder_text    {padding:20px 0 0 0;}
+.cont_wrap p	{font-size:0.85rem;}
+table.tunes th.date 		{width:5em; padding-left:0;}
+table.tunes th.track 		{display:none;}
+table.tunes th.date div 	{left:0;}
+table.tunes td:first-of-type{padding-left:0;}
+table.tunes.current td		{vertical-align:top;}
+table.tunes.current td:last-of-type {display:none;}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+body            {padding:0.5em 1.5em; font-size:1.0rem;}
+.nav_content    {padding:0;}
+h1, h2			{font-size:1.5rem; line-height:inherit;}
+.cc_wrap > div  {font-size:0.8em;}
+.cc_text        {width:85%;}
+.mob_cc			{font-size:1.0rem;}
+.link_wrap		{padding-top:0.5em;}
+.funder_wrap    {flex-flow:wrap; justify-content:left;}
+.funder_text    {padding:20px 0 0 0;}
+.cont_wrap p	{font-size:0.85rem;}
+table.tunes th.date 		{width:5em; padding-left:0;}
+table.tunes th.track 		{display:none;}
+table.tunes th.date div 	{left:0;}
+table.tunes td:first-of-type{padding-left:0;}
+table.tunes.current td		{vertical-align:top;}
+table.tunes.current td:last-of-type {display:none;}
+}
+
+</style>
+</head>
+<body><div class="main_wrap">
+	<header class="mob_content">
+<div id="mob_nav">
+    <div class="logo mob_logo">
+		<a href="./index.html">
+			<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="./data/web_logo.svg" width="38" height="38"></span>
+		</a>
+	</div>
+    <input id="mob_toggle" type="checkbox" />
+    <label for="mob_toggle">
+        <span></span>
+        <span></span>
+        <span class="aria-invisible">Menu navigation</span>
+        <span></span>
+    </label>
+    <nav aria-label="Mobile Main">
+        <ul class="mob_nav_content">
+        <li><div class="mob_link"><a href="./index.html">Home</a></div></li>
+        <li><div class="mob_link"><a href="./index.html#news">Residency</a></div></li>
+        <li><div class="mob_link"><a href="./index.html#releases">Recordings</a></div></li>
+        <li>
+			<div class="mob_cc_wrap">
+				<div class="mob_about"><p><b>shi Blank</b> was one of ten artists commissioned by Bradford Culture Company to explore specific sites on the Bradford Pennine Gateway National Nature Reserve.
+<br/>
+<br/></p>
+<p>They have been exploring Bingley North Bog and its wildlife over the past three months. As part of their residency, shi will come together with their avantgarde ambient duo, <b>Gilank</b> for an improvised performance at dusk using field recordings at the bog. A Duet with Bingley Bog seeks to question the impact of human activities on our nature reserves and what this relationship could be if we stop polluting our environment.
+<br/>
+<br/></p>
+<p>This Bog is 10,000 years old and plays a huge role in our existence on the planet. It is right next to the A650 motorway and has only been granted official National Nature Reserve status very recently.</p>
+</div>
+				<div class="mob_cc"><a href="mailto:notshi@gmail.com">Email</a> | <a href="https://shiblank.bandcamp.com/">Bandcamp</a> | <a href="https://instagram.com/shi.blank/">Instagram</a></div>
+			</div>
+        </li>
+        </ul>
+    </nav>
+</div>
+</header><header role="menubar" aria-label="Head" class="head_content">
+	<a class="skip-link" href='#main'>Skip to content</a>
+    <div class="row">
+        <div class="nav_wrap">
+            <div class="logo">
+				<span>Bogs of Bratfud</span>
+			</div>
+            <nav aria-label="Main" class="nav_content">
+				<div class="performances"><a href="#downloads">Downloads</a></div>
+				<div class="news"><a href="#news">Residency</a></div>
+                <div class="releases"><a href="#releases">Recordings</a></div>
+                <div class="about"><a href="#about">About</a></div>
+            </nav>
+        </div>
+    </div>
+</header>
+	<main id="main" class="main_content row">
+		<div class="link_wrap" id="video"><div class="blog_data">
+	<img src="./data/A_Duet_with_Bingley_Bog_score_by_Gilank.png"/>
+</div></div>
+		<div class="link_wrap" id="downloads"><div class="cont_wrap">
+	<div class="title"><h3>downloads</h3></div>
+	<table class="tunes current old">
+    <tr>
+        <th class="date">WOT<div></div></th>
+        <th class="track">DOWNLOAD LINKS<div></div></th>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>DOWNLOAD ZINE</td>
+        <td><a href="./data/Bogs_of_Bratfud_shi_Blank.pdf">Bogs_of_Bratfud_shi_Blank.pdf</a></td>
+    </tr>
+    <tr>
+        <td>DOWNLOAD GRAPHIC SCORE</td>
+        <td><a href="./data/A_Duet_with_Bingley_Bog_Graphic_Score_by_Gilank.pdf">A_Duet_with_Bingley_Bog_Graphic_Score_by_Gilank.pdf</a></td>
+    </tr>
+</table>
+</div></div>
+		<div class="link_wrap" id="news"><div class="cont_wrap">
+	<div class="title"><h3>residency</h3></div>
+	<div class="blog_wrap">
+	<div class="blog_date">24.10.2026</div>
+	I feel really fortunate to have been selected for this residency. 3 months really flew by and my improvised performance will happen this Sunday, rain or storm.
+	
+	Sometimes you can get bogged (lol) down with the details of the work but I promised a friend that I would slow down and appreciate the experience in its entirety ~ whenever I can. Hopefully, this deliberate contemplation of my relationship with mother nature has translated across to you through this sharing, be it the field recordings, the zine, the score or the performance.
+	
+	<br/><br/>I'm really looking forward to the improvised performance with Alice and I hope you'll join us for an hour of ambient, strange and hopefully, calming soundscape that is entirely inspired by my visits to the bog.
+	<div class="blog_data">
+		<img src="./data/bog1.jpg"/>
+	</div>
+</div>
+
+</div></div>
+		<div class="link_wrap" id="releases"><div class="cont_wrap">
+	<div class="title"><h3>field recordings</h3></div>
+	<table class="tunes previous old">
+    <tr>
+        <th class="date">TITLE<div></div></th>
+        <th class="track">LISTEN<div></div></th>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>Sunrise with Earsight V2 (extended)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=1492130329/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+    <tr>
+        <td>Sunrise with JrF C-Series Contact</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=2002639807/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+    <tr>
+        <td>Sunrise with Earsight V2</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=2689930447/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+    <tr>
+        <td>Sunrise (High Pass) with Earsight V2</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=3376499835/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+    <tr>
+        <td>Sunset with Earsight V2</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=2027909440/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+    <tr>
+        <td>Sunset (High Pass) with Earsight V2</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=3855205591/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+    <tr>
+        <td>Sunset with JrF C-Series Ecoutic</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=1183734728/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+    <tr>
+        <td>Sunset train with Earsight V2</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=1475845929/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+    <tr>
+        <td>Sunset with JrF D-Series+ Hydrophones</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2028156888/size=small/bgcol=ffffff/linkcol=0687f5/track=2199428392/transparent=true/" seamless><a href="https://shiblank.bandcamp.com/album/bogs-of-bratfud">Bogs of Bratfud by : :_</a></iframe></td>
+    </tr>
+</table>
+</div></div>
+	</main>
+	<footer class="foot_content" id="about">
+    <div class="row">
+        <div class="about_wrap">
+            <div class="about"><h3>About</h3></div>
+            <div class="about_text">
+                <p><b>shi Blank</b> was one of ten artists commissioned by Bradford Culture Company to explore specific sites on the Bradford Pennine Gateway National Nature Reserve.
+<br/>
+<br/></p>
+<p>They have been exploring Bingley North Bog and its wildlife over the past three months. As part of their residency, shi will come together with their avantgarde ambient duo, <b>Gilank</b> for an improvised performance at dusk using field recordings at the bog. A Duet with Bingley Bog seeks to question the impact of human activities on our nature reserves and what this relationship could be if we stop polluting our environment.
+<br/>
+<br/></p>
+<p>This Bog is 10,000 years old and plays a huge role in our existence on the planet. It is right next to the A650 motorway and has only been granted official National Nature Reserve status very recently.</p>
+
+            </div>
+        </div>
+        <div class="cc_wrap">
+            <div class="cc_text">
+                <a href="mailto:notshi@gmail.com">Email</a> | <a href="https://shiblank.bandcamp.com/">Bandcamp</a> | <a href="https://instagram.com/shi.blank/">Instagram</a>
+            </div>
+            <div class="top"><a href="#">Back up</a></div>
+        </div>
+    </div>
+</footer>
+</div></body>
+</html>
