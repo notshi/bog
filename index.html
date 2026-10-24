@@ -46,7 +46,7 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 .cc_text		{color:#bbb;}
 .funder_wrap    {align-items:center; padding:20px 0;}
 .nav_content    {display:flex; padding-left:30px; align-items: baseline; justify-content:space-between; width:40%;}
-.logo           {height:100px; align-items:center; justify-content:center; display:flex;}
+.logo           {height:100px; align-items:center; justify-content:center; display:flex; padding-top:2.5em;}
 .more           {text-align:center; width:100%; padding:30px 0; font-size:26px;}
 
 .logo span		{color:#ececec;}
@@ -104,11 +104,12 @@ table.tunes.current td a{background-color:#fff;}
 
 @media (min-width: 360px) and (max-width: 767.98px) {
 html            {font-size:18px;}
-body            {background-image:url(".//data/bog_back.png"), url(".//data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:top, bottom; font-size:1.0rem;}
+body            {background-image:url(".//data/bog_back.png"), url(".//data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:-369px -100px, bottom; font-size:1.0rem;}
 .main_wrap		{background:transparent; padding:0.5em 1.5em;}
+.logo			{padding:0;}
 .head_content   {display:none;}
 .mob_content    {display:block;}
-.main_content   {padding-top:3em;}
+.main_content   {padding-top:1em;}
 .foot_content	{border-top:1px solid #ccc;}
 h2              {font-size:1.2rem; line-height:inherit;}
 .about_text     {font-size:1.0rem; line-height:inherit;}
@@ -131,8 +132,9 @@ table.tunes.current td:last-of-type {}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-body            {background-image:url(".//data/bog_back.png"), url(".//data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:top, bottom; font-size:1.0rem;}
+body            {background-image:url(".//data/bog_back.png"), url(".//data/bog_back_bottom.png"); background-repeat:no-repeat, repeat-x; background-position:-369px -100px, bottom; font-size:1.0rem;}
 .main_wrap		{background:transparent; padding:0.5em 1.5em;}
+.logo			{padding:0;}
 .nav_content    {padding:0;}
 h1, h2			{font-size:1.5rem; line-height:inherit;}
 .cc_wrap > div  {font-size:0.8em;}
@@ -154,9 +156,11 @@ table.tunes.current td:last-of-type {}
 </style>
 </head>
 <body><div class="main_wrap">
+	<header class="mob_content">
 	<div class="logo">
-	<img src="./data/bob.svg"/>
-</div><header role="menubar" aria-label="Head" class="head_content">
+		<img src="./data/bob.svg"/>
+	</div>
+</header><header role="menubar" aria-label="Head" class="head_content">
     <div class="row">
         <div class="nav_wrap">
             <div class="logo">
